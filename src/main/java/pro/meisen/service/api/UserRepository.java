@@ -9,11 +9,18 @@ import java.util.List;
  * @author meisen
  * 2018-12-19
  */
-public interface UserService {
+public interface UserRepository {
 
     /**
      * 查询所有用户
      * @return 所有用户
      */
     List<User> queryAllUser();
+
+    /**
+     * 根据用户名查找
+     * @param username 用户名
+     * @return 用户给
+     */
+    User findByUsername(String username);
 }

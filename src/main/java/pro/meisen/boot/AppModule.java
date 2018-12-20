@@ -3,6 +3,7 @@ package pro.meisen.boot;
 import com.google.inject.AbstractModule;
 import pro.meisen.db.DataModule;
 import pro.meisen.service.ServiceModule;
+import pro.meisen.shiro.ShiroModule;
 
 /**
  * 程序Module
@@ -18,6 +19,7 @@ public class AppModule extends AbstractModule {
         install(new DataModule());
         // 绑定service服务模块
         install(new ServiceModule());
-
+        // 绑定shiro模块
+        install(new ShiroModule());
     }
 }

@@ -24,6 +24,8 @@
         <logback.version>1.2.3</logback.version>
         <jersey.version>2.27</jersey.version>
         <jackson.version>2.9.7</jackson.version>
+        <shiro.version>1.4.0</shiro.version>
+        <commons-logging.version>1.2</commons-logging.version>
     </properties>
 
     <dependencies>
@@ -83,6 +85,24 @@
         </dependency>
         <!--jersey end-->
 
+        <!--shiro begin-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-web</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-guice</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
+        <!--shiro end-->
+
         <!--log begin-->
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -94,6 +114,12 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>${commons-logging.version}</version>
+        </dependency>
+
         <!--log end-->
 
         <dependency>

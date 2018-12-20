@@ -8,4 +8,8 @@
         select * from dev.user;
     </select>
 
+    <select id="findByUsername" resultType="pro.meisen.db.entity.User" parameterType="java.lang.String">
+        select * from dev.user where username=#{username}
+    </select>
+
 </mapper>

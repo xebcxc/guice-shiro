@@ -1,47 +1,70 @@
 package pro.meisen.db.entity;
 
+import java.util.UUID;
+
 /**
  * @author meisen
  * 2018-12-19
  */
 public class User {
-    private Integer id;
+    // 用户id
+    private String id = UUID.randomUUID().toString().replaceAll("-", "");;
 
-    private String name;
+    // 用户名
+    private String username;
 
-    private String gender;
+    // 密码
+    private String password;
 
-    private Integer age;
+    // 插入日志
+    private String date;
 
-    public Integer getId() {
+    // 盐
+    private String salt = "r[noT";
+
+
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getGender() {
-        return gender;
+    public String getPassword() {
+        return password;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getDate() {
+        return date;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setDate(String date) {
+        this.date = date;
     }
+
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    public String getCredentialsSalt() {
+        return username + salt;
+    }
+
 }

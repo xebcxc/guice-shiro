@@ -2,8 +2,8 @@ package pro.meisen.service;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Scopes;
-import pro.meisen.service.api.UserService;
-import pro.meisen.service.api.adaptor.UserServiceAdaptor;
+import pro.meisen.service.api.UserRepository;
+import pro.meisen.service.api.adaptor.UserAdaptor;
 
 /**
  * @author meisen
@@ -13,6 +13,6 @@ public class ServiceModule extends AbstractModule {
 
     @Override
     protected void configure() {
-        bind(UserService.class).to(UserServiceAdaptor.class).in(Scopes.SINGLETON);
+        bind(UserRepository.class).to(UserAdaptor.class).in(Scopes.SINGLETON);
     }
 }

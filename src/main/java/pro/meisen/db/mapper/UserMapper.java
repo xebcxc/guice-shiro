@@ -15,4 +15,11 @@ public interface UserMapper {
      * @return List<User>
      */
     List<User> queryAll();
+
+    /**
+     * 根据用户名查找
+     * @param username 用户名
+     * @return 用户
+     */
+    User findByUsername(String username);
 }
