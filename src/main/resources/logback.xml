@@ -16,7 +16,7 @@
         </filter>
         <file>/opt/applog/guice-info.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>$/opt/applog/guice-info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>/opt/applog/guice-info.%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--按天滚动-->
             <MaxHistory>1</MaxHistory>
         </rollingPolicy>
@@ -32,7 +32,7 @@
         </filter>
         <file>/opt/applog/guice-error.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>$/opt/applog/guice-error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>/opt/applog/guice-error.%d{yyyy-MM-dd}.log</fileNamePattern>
             <!--按天滚动-->
             <MaxHistory>1</MaxHistory>
         </rollingPolicy>

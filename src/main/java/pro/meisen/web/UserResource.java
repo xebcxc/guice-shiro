@@ -4,6 +4,7 @@ import pro.meisen.db.entity.User;
 import pro.meisen.service.api.UserService;
 
 import javax.inject.Inject;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -24,6 +25,7 @@ public class UserResource {
         this.userService = userService;
     }
 
+    @GET
     @Path("/query")
     @Produces(MediaType.APPLICATION_JSON)
     public List<User> all() {
